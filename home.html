@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Esco Car Rental</title>
+
+    <!-- Importing Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #000000;
+            line-height: 1.6;
+        }
+
+        /* Header Section with Logo */
+        .header-logo {
+            background-image: url('background.png'); /* Set your header background image here */
+            background-size: cover;
+            background-position: center;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .header-logo img {
+            width: 225px; /* Adjust logo size */
+            height: auto;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #000000; /* Dark grey-blue background */
+            padding: 1rem 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #e74c3c;
+            border-radius: 5px;
+            transform: scale(1.1);
+        }
+
+        /* Hero Section with Video Background */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .hero-section video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.5); /* Darkens the video for better readability */
+        }
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 2;
+        }
+        .hero-section h1 {
+            font-family: 'Lobster', cursive;
+            font-size: 4rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .hero-section .cta-btn {
+            background-color: #e67e22;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .hero-section .cta-btn:hover {
+            background-color: #d35400;
+            transform: scale(1.1);
+        }
+
+        /* Featured Cars Section */
+        .featured-section {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .featured-section h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #e67e22;
+        }
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .featured-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .featured-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .featured-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .featured-card h3 {
+            color: #e67e22;
+            font-size: 1.6rem;
+            margin: 20px 0;
+            text-transform: uppercase;
+        }
+        .featured-card .price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #e67e22;
+            margin: 20px 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000000;
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        footer a {
+            color: #e67e22;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section with Logo -->
+    <div class="header-logo">
+        <img src="logo.png" alt="Esco Car Rental Logo"> <!-- Replace with your logo -->
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="service.html">Our Fleet</a></li>
+            <li><a href="Booking page.html">Booking</a></li>
+            <li><a href="contact us.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Video Background -->
+    <div class="hero-section">
+        <video autoplay muted loop>
+            <source src="1117 (1)(1).mp4" type="video/mp4"> <!-- Replace with your video source -->
+        </video>
+        <div class="hero-content">
+            <h1>Welcome to Esco Car Rental</h1>
+            <p>Experience luxury and performance with our premium car collection.</p>
+            <a href="service.html" class="cta-btn">Explore Our Fleet</a>
+        </div>
+    </div>
+
+    <!-- Featured Cars Section -->
+    <div class="featured-section">
+        <h2>Featured Cars</h2>
+        <div class="featured-grid">
+            <div class="featured-card">
+                <img src="chiron.jpg" alt="Featured Car 1">
+                <h3>Bugatti Chiron</h3>
+                <div class="price">RM3500/day</div>
+            </div>
+            <div class="featured-card">
+                <img src="FERRARI.jpg" alt="Featured Car 2">
+                <h3>Ferrari SF90</h3>
+                <div class="price">RM3500/day</div>
+            </div>
+            <div class="featured-card">
+                <img src="lambo.jpg" alt="Featured Car 3">
+                <h3>Lamborghini Aventador</h3>
+                <div class="price">RM3500/day</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Esco Car Rental. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="privacy policy.html">Privacy Policy</a> | <a href="terms.html">Terms and Conditions</a> | <a href="admin login.php">Admin</a>
+			
+        </div>
+    </footer>
+
+</body>
+</html>

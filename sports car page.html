@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury SUVs - Esco Car Rental</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #000000;
+            line-height: 1.6;
+        }
+
+        /* Header Section with Logo */
+        .header-logo {
+            background-image: url('background.png'); /* Add your header background image path here */
+            background-size: cover;
+            background-position: center;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        .header-logo img {
+            width: 225px; /* Adjust logo size */
+            height: auto;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #000;
+            padding: 1rem 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #e74c3c;
+            border-radius: 5px;
+            transform: scale(1.1);
+        }
+
+        /* Product Grid Section */
+        .product-grid-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+        .product-header {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #e67e22;
+            text-transform: uppercase;
+        }
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-card h3 {
+            color: #e67e22;
+            font-size: 1.6rem;
+            margin: 20px 0;
+            text-transform: uppercase;
+        }
+        .product-card p {
+            padding: 0 15px;
+            color: #777;
+            font-size: 1rem;
+        }
+        .product-card .price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #e67e22;
+            margin: 20px 0;
+        }
+        .product-card .book-now-btn {
+            background-color: #e67e22;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+            margin-top: auto; /* Ensure it is at the bottom of the card */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .product-card .book-now-btn:hover {
+            background-color: #d35400;
+            transform: scale(1.05);
+        }
+
+        /* Back Button */
+        .back-button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #e67e22;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #d35400;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000000;
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        footer a {
+            color: #e67e22;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section with Logo -->
+    <div class="header-logo">
+        <img src="logo.png" alt="Esco Car Rental Logo"> <!-- Replace with your logo -->
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="service.html">Our Fleet</a></li>
+            <li><a href="Booking page.html">Booking</a></li>
+            <li><a href="contact us.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Product List Section -->
+    <div class="product-header">
+      <!-- Optional: Title for the Product List -->
+</div>
+<div class="product-grid-container">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <img src="chiron.jpg" alt="Range Rover">
+            <h3>BUGATTI CHIRON&nbsp;</h3>
+            <p>Engine: 8.0L quad-turbocharged W16 Horsepower: 1,479 hp&nbsp;</p>
+            <p>Top Speed: 420 km/h</p>
+          <div class="price">RM3500/day</div>
+            <a href="Booking page.html" class="book-now-btn">Book Now</a>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <img src="ferrari.jpg" alt="BMW X7">
+            <h3>Ferrari SF90 Stradale</h3>
+            <p>Engine: 4.0L twin-turbocharged V8 + hybrid.</p>
+            <p>&nbsp;Horsepower: 986 hp.&nbsp;</p>
+          <p>Top Speed: 340 km/h</p>
+            <p>&nbsp;</p>
+          <div class="price">RM3500/day</div>
+            <a href="Booking page.html" class="book-now-btn">Book Now</a>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <img src="lambo.jpg" alt="Porsche Cayenne">
+            <h3>Lamborghini Aventador</h3>
+            <p>Engine: 6.5L naturally aspirated V12 Horsepower: 769 hp&nbsp;</p>
+            <p>Top Speed:   356 km/h</p>
+          <div class="price">RM3500/day</div>
+            <a href="Booking page.html" class="book-now-btn">Book Now</a>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <img src="p2.jpg" alt="Mercedes GLS">
+            <h3>McLaren P1</h3>
+            <p>Engine: 3.8L twin-turbocharged V8 + hybrid &nbsp;</p>
+          <p>Horsepower: 903 hp.&nbsp;</p>
+            <p>Top Speed: 350 km/h</p>
+          <div class="price">RM3500/day</div>
+            <a href="Booking page.html" class="book-now-btn">Book Now</a>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
+            <img src="aston.jpg" alt="Audi Q8">
+            <h3>Aston Martin Valkyrie</h3>
+            <p>Engine: 6.5L naturally aspirated V12 + hybrid&nbsp;&nbsp;</p>
+            <p>Horsepower: 1,160 hp.&nbsp;</p>
+          <p>Top Speed:   402 km/h</p>
+          <div class="price">RM3500/day</div>
+            <a href="Booking page.html" class="book-now-btn">Book Now</a>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card">
+            <img src="jesko.jpg" alt="Lamborghini Urus">
+            <h3>Koenigsegg Jesko</h3>
+            <p>Engine: 5.0L twin-turbocharged V8. Horsepower: 1,600 hp (on E85 fuel).&nbsp;</p>
+            <p>Top Speed:    483 km/h</p>
+          <div class="price">RM3500/day</div>
+            <a href="Booking page.html" class="book-now-btn">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Back Button -->
+    <div class="back-button-container">
+        <a href="list product.html" class="back-button">Back&nbsp;&nbsp;</a>
+    </div>
+
+<!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Esco Car Rental. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="privacy policy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a>
+        </div>
+    </footer>
+
+</body>
+</html>

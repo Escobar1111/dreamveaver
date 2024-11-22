@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luxury Car Rentals in Kuala Lumpur - Exotic and high-end cars for every occasion.">
+    <title>About Us - Esco Car Rental</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        /* Header Section with Logo */
+        .header-logo {
+            background-image: url('background.png'); /* Add your header background image path here */
+            background-size: cover;
+            background-position: center;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .header-logo img {
+            width: 225px; /* Increased logo size to 1.5x */
+            height: auto; /* Maintains aspect ratio */
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #000000;
+            padding: 1rem 0;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #e74c3c;
+            border-radius: 5px;
+        }
+
+        /* About Section with Video Background */
+        .about-section {
+            position: relative;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+            overflow: hidden;
+        }
+        .about-section video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Ensures video is in the background */
+        }
+        .about-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            position: relative; /* Ensures it stays above the video */
+            z-index: 1;
+        }
+        .about-section p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            position: relative; /* Ensures it stays above the video */
+            z-index: 1;
+        }
+
+        /* Services Section */
+        .services-section {
+            background-color: #000000;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .services-section h2 {
+            font-size: 2rem;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+        }
+        .services-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .service {
+            width: 300px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .service:hover {
+            transform: translateY(-5px);
+        }
+        .service h3 {
+            font-size: 1.5rem;
+            color: #e67e22;
+        }
+        .service p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        footer a {
+            color: #e67e22;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        footer p {
+            margin: 0;
+        }
+        footer .footer-links {
+            margin-top: 10px;
+        }
+        footer .footer-links a {
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section with Logo -->
+    <div class="header-logo">
+        <img src="logo.png" alt="Esco Car Rental Logo"> <!-- Replace with your logo -->
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="service.html">Our Fleet</a></li>
+            <li><a href="Booking page.html">Booking</a></li>
+            <li><a href="contact us.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section with Video Background -->
+    <section class="about-section" id="about">
+        <video autoplay loop muted>
+            <source src="kudaa.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h2>About Us</h2>
+        <p>Welcome to Esco Car Rental, where luxury meets excellence in every journey. Based in Kuala Lumpur, we provide a curated selection of premium vehicles and caravans designed to redefine your travel experience. Our services prioritize comfort, style, and convenience, catering to both leisure and professional needs. With professional chauffeurs, unparalleled customer service, and a commitment to quality, we ensure your time with us exceeds expectations. Discover a seamless blend of sophistication and reliability with Esco Car Rental—your gateway to first-class travel.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <h2>Our Fleet</h2>
+        <div class="services-container">
+            <div class="service">
+                <h3>Convertible</h3>
+                <p>Enjoy the elegance and comfort of our premium convertible cars, perfect for road trip or leisure.</p>
+            </div>
+            <div class="service">
+                <h3>Sports Cars</h3>
+                <p>Feel the adrenaline with our range of sports cars, designed to impress and perform.</p>
+            </div>
+            <div class="service">
+                <h3>Luxury SUVs</h3>
+                <p>Travel with ample space and style in our luxury SUVs, ideal for family and group trips.</p>
+          </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Esco Car Rental. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="privacy policy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a>
+        </div>
+    </footer>
+
+</body>
+</html>

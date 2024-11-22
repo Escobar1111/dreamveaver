@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - Esco Car Rental</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #000000;
+            line-height: 1.6;
+        }
+
+        /* Header Section with Logo */
+        .header-logo {
+            background-image: url('background.png'); /* Add your header background image path here */
+            background-size: cover;
+            background-position: center;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .header-logo img {
+            width: 225px; /* Increased logo size to 1.5x */
+            height: auto; /* Maintains aspect ratio */
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #000000;
+            padding: 1rem 0;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #e74c3c;
+            border-radius: 5px;
+        }
+
+        /* Booking Form Section */
+        .booking-form-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .booking-form-container h2 {
+            text-align: center;
+            color: #e67e22;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="date"] {
+            padding: 8px;
+        }
+        .form-group select {
+            appearance: none;
+            background-color: #f9f9f9;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.1rem;
+            background-color: #e67e22;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #d35400;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        footer a {
+            color: #e67e22;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section with Logo -->
+    <div class="header-logo">
+        <img src="logo.png" alt="Esco Car Rental Logo"> <!-- Replace with your logo -->
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="service.html">Our Fleet</a></li>
+            <li><a href="Booking page.html">Booking</a></li>
+            <li><a href="contact us.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Booking Form -->
+    <div class="booking-form-container">
+        <h2>Book your car and Chauffeur here!</h2>
+        <form action="submit_booking.php" method="post">
+            <!-- Personal Information -->
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <!-- Car Details -->
+            <div class="form-group">
+                <label for="service_type">Service Type:</label>
+                <select id="service_type" name="service_type" required>
+                    <option value="">Select Service Type</option>
+                    <option value="Chauffeur">Chauffeur service - RM1100/day</option>
+                    <option value="Luxury SUV">Luxury SUV - RM1750/day</option>
+                    <option value="Sports car">Sports Car - RM3000/day</option>
+                    <option value="Convertible">Convertible - RM2000/day</option>
+                </select>
+            </div>
+
+            <!-- Car Name Dropdown -->
+            <div class="form-group" id="car-name-group" style="display: none;">
+                <label for="car_name">Car Name:</label>
+                <select id="car_name" name="car_name" required>
+                    <option value="">Select a Car</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="pickup_location">Pickup Location:</label>
+                <input type="text" id="pickup_location" name="pickup_location" disabled required placeholder="For Chauffeur Services Only">
+            </div>
+            <div class="form-group">
+                <label for="dropoff_location">Dropoff Location:</label>
+                <input type="text" id="dropoff_location" name="dropoff_location" disabled required placeholder="For Chauffeur Services Only">
+            </div>
+
+            <!-- Rental Dates -->
+            <div class="form-group">
+                <label for="pickup_date">Pickup Date:</label>
+                <input type="date" id="pickup_date" name="pickup_date" required>
+            </div>
+            <div class="form-group">
+                <label for="dropoff_date">Dropoff Date:</label>
+                <input type="date" id="dropoff_date" name="dropoff_date" required>
+            </div>
+
+            <!-- Additional Requests -->
+            <div class="form-group">
+                <label for="requests">Additional Requests (optional):</label>
+                <textarea id="requests" name="requests" rows="4"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <a href="submit_booking.php">
+            <button type="submit" class="submit-btn">Submit Booking</button>
+            </a>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Esco Car Rental. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="privacy policy.html">Privacy Policy</a> | <a href="terms.html">Terms and Conditions</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const serviceTypeSelect = document.getElementById('service_type');
+        const carNameGroup = document.getElementById('car-name-group');
+        const carNameSelect = document.getElementById('car_name');
+        const pickupLocationInput = document.getElementById('pickup_location');
+        const dropoffLocationInput = document.getElementById('dropoff_location');
+
+        const carOptions = {
+            "Luxury SUV": ["RANGE ROVER", "BMW X7", "PORSCHE CAYENNE", "MERCEDES GLS", "AUDI Q8", "LAMBORGHINI URUS"],
+            "Sports car": ["BUGATTI CHIRON", "FERRARI SF90 STRADALE", "LAMBORGHINI AVENTADOR", "MCLAREN P1", "ASTON MARTIN VALKYRIE", "KOENIGSEGG JESKO"],
+            "Convertible": ["FORD MUSTANG CO", "BMW Z4 ROADSTER", "AUDI A5 CABRIOLET", "PORSCHE 911 CABRIOLET", "MERCEDES SLK ROADSTER", "JAGUAR F-TYPE"]
+        };
+
+        function updateCarOptions() {
+    const selectedType = serviceTypeSelect.value;
+
+    // Update car names based on service type
+    carNameSelect.innerHTML = '<option value="">Select a Car</option>';
+    if (carOptions[selectedType]) {
+        carOptions[selectedType].forEach(car => {
+            const option = document.createElement('option');
+            option.value = car;
+            option.textContent = car;
+            carNameSelect.appendChild(option);
+        });
+        carNameGroup.style.display = 'block';
+    } else {
+        carNameGroup.style.display = 'none';
+    }
+
+    // Enable or disable pickup and dropoff locations based on service type
+    const isChauffeur = selectedType === "Chauffeur";
+    pickupLocationInput.disabled = !isChauffeur;
+    dropoffLocationInput.disabled = !isChauffeur;
+
+    // If disabled, clear the input values (but do not disable them in the HTML)
+    if (!isChauffeur) {
+        pickupLocationInput.value = "";
+        dropoffLocationInput.value = "";
+    }
+}
+
+
+        serviceTypeSelect.addEventListener('change', updateCarOptions);
+    </script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our luxury car fleet - High-quality vehicles for rent.">
+    <title>Product List - Luxury Car Rentals</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #fff;
+            background-image: url('bodybggg.jpg'); /* Add your body background image path here */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Keeps the background fixed while scrolling */
+        }
+
+        /* Header Section with Logo */
+        .header-logo {
+            background-image: url('background.png'); /* Add your header background image path here */
+            background-size: cover;
+            background-position: center;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .header-logo img {
+            width: 225px; /* Increased logo size to 1.5x */
+            height: auto; /* Maintains aspect ratio */
+        }
+
+        /* Navigation Bar */
+        .nav-header {
+            background-color: #000000;
+            padding: 1rem 0;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-container .logo {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .nav-container .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+        .nav-container .logo span {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ecf0f1; /* White color for logo */
+            text-transform: uppercase;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 8px 16px;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #e74c3c;
+            border-radius: 5px;
+        }
+
+        /* Product List Section */
+        .product-list {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        .product-list h1 {
+            text-align: center;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .product:hover {
+            transform: translateY(-5px);
+        }
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-details {
+            padding: 15px;
+            text-align: center;
+        }
+        .product-details h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .product-details p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .product-details .price {
+            font-size: 1.2rem;
+            color: #e67e22;
+            font-weight: bold;
+        }
+        .product-details a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            color: #fff;
+            background: #e67e22;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .product-details a:hover {
+            background: #d35400;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #000000;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .footer h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+        .footer p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #FFFFFF;
+        }
+        .footer ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .footer ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+        .footer ul li a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        .footer ul li a:hover {
+            color: #e74c3c;
+        }
+        .footer .social-icons {
+            margin-top: 20px;
+        }
+        .footer .social-icons a {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .footer .social-icons a:hover {
+            color: #fff;
+        }
+        .footer .contact-info {
+            margin-top: 20px;
+        }
+        .footer .contact-info p {
+            font-size: 1.1rem;
+            color: #bdc3c7;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header-logo">
+        <img src="logo.png" alt="Esco Car Rental Logo"> <!-- Replace with your logo -->
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="nav-header">
+        <div class="nav-container">
+  
+        
+                
+                
+            </div>
+            <!-- Navigation Links -->
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about us.html">About Us</a></li>
+                    <li><a href="service.html">Our Fleet</a></li>
+                    <li><a href="Booking page.html">Booking</a></li>
+                    <li><a href="contact us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Product List Section -->
+    <div class="product-list">
+        <h1>Our Fleet</h1>
+        <div class="products">
+            <!-- Product 1 -->
+            <div class="product">
+                <img src="urus.jpg" alt="Car 1"> <!-- Replace with your car image -->
+                <div class="product-details">
+                    <h2>Luxury SUV</h2>
+                    <p>Spacious and comfortable, ideal for long trips.</p>
+                    <span class="price">RM1750/day</span>
+                    <a href="luxury suv.html">Book Now</a>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="product">
+                <img src="p1.jpg" alt="Car 2"> <!-- Replace with your car image -->
+                <div class="product-details">
+                    <h2>Sports Car</h2>
+                    <p>Feel the thrill with our high-performance cars.</p>
+                    <span class="price">RM3500/day</span>
+                    <a href="sports car page.html">Book Now</a>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="product">
+                <img src="atap.jpg" alt="Car 3"> <!-- Replace with your car image -->
+                <div class="product-details">
+                    <h2>Convertible</h2>
+                    <p>Perfect for sunny days and scenic routes.</p>
+                    <span class="price">RM2000/day</span>
+                    <a href="convertible page.html">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <h2>Esco Car Rental</h2>
+        <p>Providing the finest luxury car rental services since 2020.</p>

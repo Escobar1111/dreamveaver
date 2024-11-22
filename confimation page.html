@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmation - Esco Car Rental</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000000;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header with Logo */
+        .header-logo {
+            background: url('background.png') center/cover no-repeat;
+            padding: 3rem 0;
+            text-align: center;
+            position: relative;
+        }
+        .header-logo img {
+            max-width: 220px;
+            height: auto;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #000000;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+        nav ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 16px;
+            transition: all 0.3s;
+        }
+        nav ul li a:hover {
+            color: #fff;
+            background-color: #e74c3c;
+            border-radius: 5px;
+        }
+
+        /* Confirmation Container */
+        .confirmation-container {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 35px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .confirmation-container h2 {
+            font-size: 2.2rem;
+            color: #27ae60;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .confirmation-message {
+            font-size: 1.15rem;
+            color: #555;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .confirmation-message span {
+            font-weight: bold;
+            color: #e67e22;
+        }
+
+        /* Booking Details */
+        .booking-details {
+            text-align: left;
+            color: #333;
+            margin-top: 30px;
+            font-size: 1rem;
+        }
+
+        .booking-details h3 {
+            font-size: 1.6rem;
+            color: #333;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .booking-details ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .booking-details li {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .booking-details li i {
+            font-size: 1.4rem;
+            color: #e67e22;
+            margin-right: 12px;
+        }
+
+        /* Call to Action Button */
+        .cta-button {
+            background-color: #27ae60;
+            color: #fff;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #2ecc71;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000000;
+            color: #fff;
+            padding: 25px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        footer a {
+            color: #e67e22;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .confirmation-container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .confirmation-container h2 {
+                font-size: 1.8rem;
+            }
+
+            .booking-details li {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Logo -->
+    <div class="header-logo">
+        <img src="logo.png" alt="Esco Car Rental Logo"> <!-- Replace with your logo -->
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="service.html">Our Fleet</a></li>
+            <li><a href="Booking page.html">Booking</a></li>
+            <li><a href="contact us.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Confirmation Section -->
+<div class="confirmation-container">
+        <h2><i>&#x2705;</i> Payment Successful!</h2>
+        <div class="confirmation-message">
+            <p>Thank you for choosing Esco Car Rental. Your payment has been successfully processed. Your booking details are below:</p>
+        </div>
+
+        <!-- Booking Details -->
+        <div class="booking-details">
+            <h3>Booking Summary</h3>
+            <ul>
+                <li><i class="icon">&#x1F464;</i><strong>Full Name:</strong> </li>
+                <li><i class="icon">&#x2709;</i><strong>Email:</strong> </li>
+                <li><i class="icon">&#x1F4F1;</i><strong>Phone Number:</strong> </li>
+                <li><i class="icon">&#x1F697;</i><strong>Service Type:</strong> </li>
+                <li><i class="icon">&#x1F4CD;</i><strong>Pickup Location:</strong> </li>
+                <li><i class="icon">&#x1F4CD;</i><strong>Dropoff Location:</strong> </li>
+                <li><i class="icon">&#x1F4C5;</i><strong>Pickup Date:</strong> </li>
+                <li><i class="icon">&#x1F4C5;</i><strong>Dropoff Date:</strong> </li>
+                <li><i class="icon">&#x1F4B5;</i><strong>Total Amount:</strong> </li>
+            </ul>
+        </div>
+
+  <div class="confirmation-message">
+            <p>Your booking is confirmed. A confirmation email has been sent with all the details.</p>
+            <p>If you have any questions, please feel free to <a href="contact.html">contact us</a>.</p>
+    </div>
+
+    <!-- CTA Button -->
+    <a href="home.html" class="cta-button">Return to Home</a>
+  </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Esco Car Rental. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="privacy policy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a>
+        </div>
+    </footer>
+
+</body>
+</html>
